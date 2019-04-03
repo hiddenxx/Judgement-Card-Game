@@ -10,6 +10,9 @@ class Players():
         self.assumption_win = assumption_win
         self.jokers_on_hand = jokers_on_hand
 
+    def add_to_hand(self,deal):
+        self.hand.append(deal)
+
 class Deck():
     def __init__(self):
         self.deck = []
@@ -22,13 +25,14 @@ class Card():
         self.suit = suit
         self.rank = rank
 class Round():
-    def __init__(self):
-        self.players = []
-        self.deck = Deck()
+    def __init__(self,players,deck):
+        self.players = players
+        self.deck = deck
 
     def deal(self):
         single_card = self.deck.pop()
         return single_card
 class Game():
-    round_wins = []
-    pass
+    def __init__(self):
+        self.round_wins = []
+
