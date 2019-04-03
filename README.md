@@ -8,4 +8,4 @@ Rules of the Game :
 3. The Players will enter into the Game().
 4. The Dealer will deal each player 10 cards in initial round and it decreases each round.
 5. <b> Number of rounds = Number of cards in Hand <b>
-6. 
+6. So
