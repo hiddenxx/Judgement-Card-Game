@@ -1,1 +1,2 @@
-from rules.py import *
+from src import table
+from src import rules

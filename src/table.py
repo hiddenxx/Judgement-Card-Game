@@ -5,7 +5,7 @@ values = {'Two': 2, 'Three': 3, 'Four': 4, 'Five': 5, 'Six': 6, 'Seven': 7, 'Eig
           'Jack': 10, 'Queen': 10, 'King': 10, 'Ace': 11}
 
 class Players():
-    def __init__(self,assumption_win,jokers_on_hand = 0,round_wins = 0):
+    def __init__(self,assumption_win = 0,jokers_on_hand = 0):
         self.hand = []
         self.assumption_win = assumption_win
         self.jokers_on_hand = jokers_on_hand
@@ -30,6 +30,7 @@ class Round():
         self.players = players
         self.deck = deck
         self.round_joker = round_joker # This comes from the Players turn.
+        self.round_win
 
     def get_round_joker(self):
         random.shuffle(self.deck)
@@ -49,6 +50,12 @@ class Game():
         return tSuits.pop()
 
     def turnDecision(self):
+        #playerCount = int(input("How many Players?"))
+        playerCount = 3
+        players = (lambda Players : Players()*3)
+        print(players)
         pass
+
+G1 = Game('Spades')
 
 

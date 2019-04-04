@@ -1,7 +1,2 @@
-from src import *
-
-D1 = Deck()
-
-
-
-
+def main():
+    pass
