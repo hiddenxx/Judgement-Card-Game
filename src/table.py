@@ -1,4 +1,8 @@
 import random
+from src import run
+
+logger = run.get_loggerObject()
+
 suits = ('Spades' , 'Diamonds' , 'Clubs' , 'Hearts')
 ranks = ('Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Jack', 'Queen', 'King', 'Ace')
 values = {'Two': 2, 'Three': 3, 'Four': 4, 'Five': 5, 'Six': 6, 'Seven': 7, 'Eight': 8, 'Nine': 9, 'Ten': 10,
@@ -30,7 +34,6 @@ class Round():
         self.players = players
         self.deck = deck
         self.round_joker = round_joker # This comes from the Players turn.
-        self.round_win
 
     def get_round_joker(self):
         random.shuffle(self.deck)
@@ -49,13 +52,25 @@ class Game():
         tSuits = random.shuffle(suits)
         return tSuits.pop()
 
+    def create_players(self,number_of_players):
+        players = []
+        for i in range(0,number_of_players):
+            players.append(Players())
+        return players
+
     def turnDecision(self):
+        global game_number
         #playerCount = int(input("How many Players?"))
         playerCount = 3
-        players = (lambda Players : Players()*3)
+        players = Players()
+        while game_number:
+
+
+            game_number -= 1
         print(players)
-        pass
 
 G1 = Game('Spades')
+players = G1.create_players(3)
+print(players)
 
 
