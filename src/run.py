@@ -1,13 +1,14 @@
-import logging , duallog
+import logging , duallog , sys , os
+sys.path.insert(0, os.path.abspath(".."))
 
 def get_loggerObject():
     duallog.setup('Logs')
     logger = logging.getLogger()
     return logger
 
-def main():
-    get_loggerObject()
+logger = get_loggerObject()
 
-if __name__ == '__main__':
-    main()
+def main():
+
+    pass
 
