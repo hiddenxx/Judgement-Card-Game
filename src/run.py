@@ -6,9 +6,6 @@ def get_loggerObject():
     logger = logging.getLogger()
     return logger
 
-logger = get_loggerObject()
-
 def main():
 
     pass
-

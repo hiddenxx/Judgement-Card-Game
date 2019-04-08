@@ -1,5 +1,4 @@
 import random
-
 from src import run
 
 logger = run.get_loggerObject()
@@ -76,14 +75,17 @@ class Game():
         pass
     def main_round(self,main_rounds):
         # A Main_round contains 10 sub-rounds
-        while main_rounds:
-            pass
+        print("Reached Main Round")
     def single_game(self):
         # Single_game contains 10 main rounds
         playerNum = 1
         players = self.create_players(playerNum)
         deck = Deck()
         logger.info(f"# Initializing the game Judgement")
+        for j in range(0,10):
+            pass
+        return None
+
 
     # def insideRoundDecision(self):
     #     #playerCount = int(input("How many Players?"))
